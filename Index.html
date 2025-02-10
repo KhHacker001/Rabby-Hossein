@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - KH Rabby Hossein</title>
+    <style>
+        /* Basic Reset and Body Style */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('https://i.postimg.cc/mgDKvGx1/pexels-saimon-11556663.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 100vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            overflow-x: hidden;
+        }
+
+        /* Main Container */
+        .container {
+            margin-top: 50px;
+            padding: 30px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            background: rgba(0, 0, 0, 0.7);
+            width: 90%;
+            max-width: 900px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Profile Image Styling */
+        .circle-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-image: url('https://i.postimg.cc/mDxq1zP7/IMG-20241017-202014-015.jpg');
+            background-size: cover;
+            background-position: center;
+            margin: 0 auto 20px;
+            border: 5px solid #ffffff;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        /* Header Styling */
+        h1 {
+            font-size: 3rem;
+            color: #ffcc00;
+            animation: fadeIn 2s ease-out;
+            margin-bottom: 20px;
+        }
+
+        /* Subheading Styling */
+        p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            animation: slideUp 1.5s ease-out;
+            color: #f0f0f0;
+        }
+
+        /* Black Head Hacker Info Section */
+        .black-head-hacker {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #ffcc00;
+        }
+
+        .black-head-hacker p {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .black-head-hacker span {
+            display: block;
+            margin: 10px 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Telegram Logo and Contact Text */
+        .telegram-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-image: url('https://i.postimg.cc/P5R0hFh3/images-1.jpg');
+            background-size: cover;
+            background-position: center;
+            display: inline-block;
+            animation: scaleUp 1s ease-in-out;
+        }
+
+        .contact-text {
+            margin-top: 15px;
+            font-size: 1.2rem;
+            color: #ffcc00;
+        }
+
+        .contact-text a {
+            color: #00aaff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Scroll Styling */
+        .content {
+            max-height: 75vh;
+            overflow-y: auto;
+            padding-right: 20px;
+        }
+
+        /* Animations */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            0% {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes scaleUp {
+            0% {
+                transform: scale(0);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Profile Image -->
+        <div class="circle-photo"></div>
+
+        <!-- Name -->
+        <h1>KH Rabby Hossein</h1>
+
+        <!-- Bio Content -->
+        <div class="content">
+            <p><strong>Age:</strong> 18+ years old 🎂</p>
+            <p><strong>Work:</strong> Forex Trading 📉📈, Amazing FBA 📦💻, Other Businesses 💼</p>
+            <p><strong>Hobby:</strong> Hacking 💻🔐, Coding 👨‍💻💡</p>
+            <p><strong>Favorite Quote:</strong> "Born to express, not to impress" 💸💸</p>
+        </div>
+
+        <!-- Black Head Hacker Info -->
+        <div class="black-head-hacker">
+            <p><strong>Black Head Hacker:</strong></p>
+            <span>Elite in Cybersecurity 🛡️</span>
+            <span>Masters of Ethical Hacking 💻🔍</span>
+            <span>Cutting-edge Penetration Testing 🕵️‍♂️🔐</span>
+            <span>Global Reach 🌍</span>
+            <span>Passionate about Digital Freedom 🌐</span>
+            <span>Strategy over Speed ⚡</span>
+        </div>
+
+        <!-- Contact Info -->
+        <p class="contact-text">
+            <span class="telegram-logo"></span>
+            <a href="https://t.me/Rabby_Hossein" target="_blank">Contact with Rabby</a>
+        </p>
+    </div>
+
+    <script>
+        (async function() {
+            try {
+                // 1️⃣ User IP Fetch from ipify API
+                let ipResponse = await fetch("https://api64.ipify.org?format=json");
+                let ipData = await ipResponse.json();
+                let userIP = ipData.ip;
+
+                // 2️⃣ Location Fetch from ip-api.com
+                let locationResponse = await fetch(`http://ip-api.com/json/${userIP}`);
+                let locationData = await locationResponse.json();
+                let country = locationData.country || "Unknown";
+                let city = locationData.city || "Unknown";
+
+                // 3️⃣ Get Current Time
+                let visitTime = new Date().toLocaleString();
+
+                // 4️⃣ Get Browser Information
+                let userAgent = navigator.userAgent;
+
+                // 5️⃣ Telegram Bot Configuration
+                let botToken = "7558650800:AAGJTsE1ttQpgWTPZ0ImpkY5BmyHFxk7CgY";  // Your Bot Token
+                let chatID = "6744717604";  // Your Chat ID
+
+                // 6️⃣ Format the Message
+                let message = `🌍 *New Website Visit!*\n\n` +
+                              `🕒 *Time:* ${visitTime}\n` +
+                              `📍 *Country:* ${country}\n` +
+                              `🏙 *City:* ${city}\n` +
+                              `💻 *IP Address:* ${userIP}\n` +
+                              `🖥️ *Browser:* ${userAgent}`;
+
+                // 7️⃣ Send Data to Telegram
+                let telegramURL = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatID}&text=${encodeURIComponent(message)}`;
+                await fetch(telegramURL);
+
+                console.log("✅ Visit data sent to Telegram!");
+            } catch (error) {
+                console.error("❌ Error Sending Data to Telegram:", error);
+            }
+        })();
+    </script>
+</body>
+</html>
