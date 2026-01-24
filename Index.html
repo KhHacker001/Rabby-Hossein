@@ -3,240 +3,268 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - KH Rabby Hossein</title>
-    <style>
-        /* Basic Reset and Body Style */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            background-image: url('https://i.postimg.cc/mgDKvGx1/pexels-saimon-11556663.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            height: 100vh;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            overflow-x: hidden;
-        }
-
-        /* Main Container */
-        .container {
-            margin-top: 50px;
-            padding: 30px;
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-            background: rgba(0, 0, 0, 0.7);
-            width: 90%;
-            max-width: 900px;
-            text-align: center;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-        }
-
-        /* Profile Image Styling */
-        .circle-photo {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            background-image: url('https://i.postimg.cc/mDxq1zP7/IMG-20241017-202014-015.jpg');
-            background-size: cover;
-            background-position: center;
-            margin: 0 auto 20px;
-            border: 5px solid #ffffff;
-            animation: bounce 2s ease-in-out infinite;
-        }
-
-        /* Header Styling */
-        h1 {
-            font-size: 3rem;
-            color: #ffcc00;
-            animation: fadeIn 2s ease-out;
-            margin-bottom: 20px;
-        }
-
-        /* Subheading Styling */
-        p {
-            font-size: 1.2rem;
-            margin: 10px 0;
-            animation: slideUp 1.5s ease-out;
-            color: #f0f0f0;
-        }
-
-        /* Black Head Hacker Info Section */
-        .black-head-hacker {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 2px solid #ffcc00;
-        }
-
-        .black-head-hacker p {
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .black-head-hacker span {
-            display: block;
-            margin: 10px 0;
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        /* Telegram Logo and Contact Text */
-        .telegram-logo {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-image: url('https://i.postimg.cc/P5R0hFh3/images-1.jpg');
-            background-size: cover;
-            background-position: center;
-            display: inline-block;
-            animation: scaleUp 1s ease-in-out;
-        }
-
-        .contact-text {
-            margin-top: 15px;
-            font-size: 1.2rem;
-            color: #ffcc00;
-        }
-
-        .contact-text a {
-            color: #00aaff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        /* Scroll Styling */
-        .content {
-            max-height: 75vh;
-            overflow-y: auto;
-            padding-right: 20px;
-        }
-
-        /* Animations */
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-10px);
-            }
-            60% {
-                transform: translateY(-5px);
-            }
-        }
-
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-
-        @keyframes slideUp {
-            0% {
-                transform: translateY(20px);
-                opacity: 0;
-            }
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes scaleUp {
-            0% {
-                transform: scale(0);
-            }
-            100% {
-                transform: scale(1);
-            }
-        }
-    </style>
+    <title>KH Rabby Hossein | Python Developer Portfolio</title>
+    <meta name="description" content="Professional Python Developer specializing in Django, Flask, and scalable web applications. Clean code, efficient solutions.">
+    <meta name="keywords" content="Python Developer, Django, Flask, Web Development, Backend, Portfolio, KH Rabby Hossein">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐍</text></svg>">
 </head>
 <body>
-    <div class="container">
-        <!-- Profile Image -->
-        <div class="circle-photo"></div>
-
-        <!-- Name -->
-        <h1>KH Rabby Hossein</h1>
-
-        <!-- Bio Content -->
-        <div class="content">
-            <p><strong>Age:</strong> 18+ years old 🎂</p>
-            <p><strong>Work:</strong> Forex Trading 📉📈, Amazing FBA 📦💻, Other Businesses 💼</p>
-            <p><strong>Hobby:</strong> Hacking 💻🔐, Coding 👨‍💻💡</p>
-            <p><strong>Favorite Quote:</strong> "Born to express, not to impress" 💸💸</p>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">KH<span>Rabby</span></a>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <div class="theme-toggle">
+                        <input type="checkbox" id="theme-switch" class="theme-checkbox">
+                        <label for="theme-switch" class="theme-label">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                            <div class="theme-ball"></div>
+                        </label>
+                    </div>
+                </li>
+            </ul>
         </div>
+    </nav>
 
-        <!-- Black Head Hacker Info -->
-        <div class="black-head-hacker">
-            <p><strong>Black Head Hacker:</strong></p>
-            <span>Elite in Cybersecurity 🛡️</span>
-            <span>Masters of Ethical Hacking 💻🔍</span>
-            <span>Cutting-edge Penetration Testing 🕵️‍♂️🔐</span>
-            <span>Global Reach 🌍</span>
-            <span>Passionate about Digital Freedom 🌐</span>
-            <span>Strategy over Speed ⚡</span>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="fade-in-up">Hi, I'm <span class="highlight">KH Rabby Hossein</span></h1>
+                    <h2 class="fade-in-up delay-1">Python Developer</h2>
+                    <p class="fade-in-up delay-2">Building efficient, scalable solutions with Python</p>
+                    <div class="hero-buttons fade-in-up delay-3">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    </div>
+                </div>
+                <div class="hero-image fade-in-up delay-2">
+                    <div class="profile-image">
+                        <img src="https://i.postimg.cc/W4z2nFBG/IMG-20250707-WA0002-2.jpg" KH Rabby Hossein - Python Developer">
+                        <div class="image-border"></div>
+                    </div>
+                </div>
+            </div>
         </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="arrow">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </section>
 
-        <!-- Contact Info -->
-        <p class="contact-text">
-            <span class="telegram-logo"></span>
-            <a href="https://t.me/Rabby_Hossein" target="_blank">Contact with Rabby</a>
-        </p>
-    </div>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a passionate Python Developer with expertise in building scalable web applications and backend systems. My journey in software development started 5 years ago, and I've been specializing in Python for the past 3 years.</p>
+                    <p>I thrive on transforming complex problems into elegant solutions, writing clean, maintainable code that stands the test of time. My approach combines technical expertise with a deep understanding of user needs to deliver products that are both powerful and intuitive.</p>
+                    <p>When I'm not coding, I contribute to open-source projects, write technical articles, and explore new technologies in the Python ecosystem. I believe in continuous learning and staying updated with industry best practices.</p>
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <h3>Education</h3>
+                            <p>B.Sc. in Computer Science & Engineering</p>
+                            <p class="detail-sub">Dhaka University | 2016-2020</p>
+                        </div>
+                        <div class="detail-item">
+                            <h3>Experience</h3>
+                            <p>3+ years as Python Developer</p>
+                            <p class="detail-sub">Specializing in Django & Flask</p>
+                        </div>
+                        <div class="detail-item">
+                            <h3>Location</h3>
+                            <p>Dhaka, Bangladesh</p>
+                            <p class="detail-sub">Available for remote work</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <script>
-        (async function() {
-            try {
-                // 1️⃣ User IP Fetch from ipify API
-                let ipResponse = await fetch("https://api64.ipify.org?format=json");
-                let ipData = await ipResponse.json();
-                let userIP = ipData.ip;
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <p class="section-subtitle">My proficiency in Python and related technologies</p>
+            <div class="skills-filter">
+                <button class="filter-btn active" data-filter="all">All Skills</button>
+                <button class="filter-btn" data-filter="backend">Backend</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+                <button class="filter-btn" data-filter="databases">Databases</button>
+                <button class="filter-btn" data-filter="devops">DevOps</button>
+                <button class="filter-btn" data-filter="tools">Tools</button>
+            </div>
+            <div class="skills-container" id="skills-container">
+                <!-- Skills will be loaded dynamically from JSON -->
+                <div class="loading-spinner">
+                    <div class="spinner"></div>
+                    <p>Loading skills...</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                // 2️⃣ Location Fetch from ip-api.com
-                let locationResponse = await fetch(`http://ip-api.com/json/${userIP}`);
-                let locationData = await locationResponse.json();
-                let country = locationData.country || "Unknown";
-                let city = locationData.city || "Unknown";
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">A selection of my recent work</p>
+            <div class="projects-filter">
+                <button class="project-filter-btn active" data-filter="all">All Projects</button>
+                <button class="project-filter-btn" data-filter="django">Django</button>
+                <button class="project-filter-btn" data-filter="flask">Flask</button>
+                <button class="project-filter-btn" data-filter="data">Data Analysis</button>
+                <button class="project-filter-btn" data-filter="api">APIs</button>
+            </div>
+            <div class="projects-grid" id="projects-grid">
+                <!-- Projects will be loaded dynamically from JSON -->
+                <div class="loading-spinner">
+                    <div class="spinner"></div>
+                    <p>Loading projects...</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                // 3️⃣ Get Current Time
-                let visitTime = new Date().toLocaleString();
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Have a project in mind? Let's build something amazing together!</p>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Email</h3>
+                            <p>rabby.hossein@example.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Phone</h3>
+                            <p>+880 1234 567890</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Location</h3>
+                            <p>Dhaka, Bangladesh</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://stackoverflow.com" target="_blank" class="social-link">
+                            <i class="fab fa-stack-overflow"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required placeholder="Your Name">
+                            <span class="focus-border"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required placeholder="Your Email">
+                            <span class="focus-border"></span>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required placeholder="Your Message"></textarea>
+                            <span class="focus-border"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                        <div id="form-message" class="form-message"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                // 4️⃣ Get Browser Information
-                let userAgent = navigator.userAgent;
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#" class="logo">KH<span>Rabby</span></a>
+                    <p>Python Developer specializing in scalable web solutions.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#propngjects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Stay Updated</h3>
+                    <p>Subscribe to my newsletter for the latest projects and insights.</p>
+                    <form id="newsletterForm">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit" class="btn btn-small">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> KH Rabby Hossein. All rights reserved.</p>
+                <button id="backToTop" class="back-to-top">
+                    <i class="fas fa-arrow-up"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
 
-                // 5️⃣ Telegram Bot Configuration
-                let botToken = "7558650800:AAGJTsE1ttQpgWTPZ0ImpkY5BmyHFxk7CgY";  // Your Bot Token
-                let chatID = "6744717604";  // Your Chat ID
-
-                // 6️⃣ Format the Message
-                let message = `🌍 *New Website Visit!*\n\n` +
-                              `🕒 *Time:* ${visitTime}\n` +
-                              `📍 *Country:* ${country}\n` +
-                              `🏙 *City:* ${city}\n` +
-                              `💻 *IP Address:* ${userIP}\n` +
-                              `🖥️ *Browser:* ${userAgent}`;
-
-                // 7️⃣ Send Data to Telegram
-                let telegramURL = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatID}&text=${encodeURIComponent(message)}`;
-                await fetch(telegramURL);
-
-                console.log("✅ Visit data sent to Telegram!");
-            } catch (error) {
-                console.error("❌ Error Sending Data to Telegram:", error);
-            }
-        })();
-    </script>
+    <!-- Scripts -->
+    <script src="script.js"></script>
 </body>
 </html>
