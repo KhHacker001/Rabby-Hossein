@@ -1,0 +1,124 @@
+{
+  "skills": [
+    {
+      "name": "Python",
+      "category": "backend",
+      "proficiency": 95,
+      "icon": "fab fa-python"
+    },
+    {
+      "name": "Django",
+      "category": "backend",
+      "proficiency": 90,
+      "icon": "fas fa-server"
+    },
+    {
+      "name": "Flask",
+      "category": "backend",
+      "proficiency": 88,
+      "icon": "fas fa-flask"
+    },
+    {
+      "name": "FastAPI",
+      "category": "backend",
+      "proficiency": 85,
+      "icon": "fas fa-bolt"
+    },
+    {
+      "name": "JavaScript",
+      "category": "frontend",
+      "proficiency": 80,
+      "icon": "fab fa-js-square"
+    },
+    {
+      "name": "HTML/CSS",
+      "category": "frontend",
+      "proficiency": 85,
+      "icon": "fab fa-html5"
+    },
+    {
+      "name": "PostgreSQL",
+      "category": "databases",
+      "proficiency": 90,
+      "icon": "fas fa-database"
+    },
+    {
+      "name": "MySQL",
+      "category": "databases",
+      "proficiency": 85,
+      "icon": "fas fa-database"
+    },
+    {
+      "name": "MongoDB",
+      "category": "databases",
+      "proficiency": 75,
+      "icon": "fas fa-leaf"
+    },
+    {
+      "name": "Git",
+      "category": "tools",
+      "proficiency": 90,
+      "icon": "fab fa-git-alt"
+    },
+    {
+      "name": "Docker",
+      "category": "devops",
+      "proficiency": 80,
+      "icon": "fab fa-docker"
+    },
+    {
+      "name": "AWS",
+      "category": "devops",
+      "proficiency": 75,
+      "icon": "fab fa-aws"
+    },
+    {
+      "name": "RESTful APIs",
+      "category": "backend",
+      "proficiency": 92,
+      "icon": "fas fa-code"
+    },
+    {
+      "name": "Data Structures & Algorithms",
+      "category": "backend",
+      "proficiency": 88,
+      "icon": "fas fa-sitemap"
+    },
+    {
+      "name": "Pandas & NumPy",
+      "category": "backend",
+      "proficiency": 85,
+      "icon": "fas fa-chart-line"
+    },
+    {
+      "name": "Web Scraping",
+      "category": "backend",
+      "proficiency": 82,
+      "icon": "fas fa-spider"
+    },
+    {
+      "name": "Testing (pytest)",
+      "category": "tools",
+      "proficiency": 85,
+      "icon": "fas fa-vial"
+    },
+    {
+      "name": "CI/CD",
+      "category": "devops",
+      "proficiency": 78,
+      "icon": "fas fa-sync-alt"
+    },
+    {
+      "name": "Asyncio",
+      "category": "backend",
+      "proficiency": 80,
+      "icon": "fas fa-bolt"
+    },
+    {
+      "name": "Machine Learning Basics",
+      "category": "backend",
+      "proficiency": 70,
+      "icon": "fas fa-brain"
+    }
+  ]
+}
