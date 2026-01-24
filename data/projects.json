@@ -1,0 +1,52 @@
+{
+  "projects": [
+    {
+      "title": "E-Commerce Platform",
+      "description": "A full-featured e-commerce platform built with Django, featuring user authentication, product management, shopping cart, and payment integration.",
+      "tech": ["django", "python", "postgresql", "javascript", "bootstrap"],
+      "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "live": "https://example.com/ecommerce-demo",
+      "github": "https://github.com/khrabby/ecommerce-platform"
+    },
+    {
+      "title": "RESTful API Service",
+      "description": "A scalable REST API built with Flask and SQLAlchemy, featuring JWT authentication, rate limiting, and comprehensive documentation with Swagger.",
+      "tech": ["flask", "python", "rest", "jwt", "sqlalchemy"],
+      "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "live": "https://api.example.com/docs",
+      "github": "https://github.com/khrabby/flask-rest-api"
+    },
+    {
+      "title": "Data Analysis Dashboard",
+      "description": "Interactive dashboard for data visualization and analysis using Pandas, Plotly, and Dash. Processes large datasets and provides insightful visualizations.",
+      "tech": ["python", "data", "pandas", "plotly", "dash"],
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "live": "https://example.com/data-dashboard",
+      "github": "https://github.com/khrabby/data-analysis-dashboard"
+    },
+    {
+      "title": "Real-time Chat Application",
+      "description": "A real-time chat application using Django Channels and WebSockets. Features multiple chat rooms, user presence, and message history.",
+      "tech": ["django", "python", "websockets", "redis", "javascript"],
+      "image": "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "live": "https://chat.example.com",
+      "github": "https://github.com/khrabby/realtime-chat-app"
+    },
+    {
+      "title": "Automated Web Scraper",
+      "description": "A robust web scraping tool using Scrapy and BeautifulSoup that extracts, processes, and stores data from multiple sources with scheduling capabilities.",
+      "tech": ["python", "scrapy", "beautifulsoup", "mongodb", "celery"],
+      "image": "https://images.unsplash.com/photo-1457305237443-44c3d5a30b89?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "live": "https://scraper.example.com",
+      "github": "https://github.com/khrabby/automated-web-scraper"
+    },
+    {
+      "title": "Task Management System",
+      "description": "A comprehensive task and project management system with team collaboration features, notifications, and progress tracking.",
+      "tech": ["django", "python", "postgresql", "javascript", "api"],
+      "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "live": "https://tasks.example.com",
+      "github": "https://github.com/khrabby/task-management-system"
+    }
+  ]
+}
