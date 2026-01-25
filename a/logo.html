@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyUtil - Modern Tech Logo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f8fafc;
+            font-family: 'Poppins', sans-serif;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #1e293b;
+            margin-bottom: 40px;
+            font-weight: 600;
+            font-size: 2.5rem;
+        }
+        
+        .subtitle {
+            color: #64748b;
+            margin-bottom: 60px;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+        
+        /* Logo Container */
+        .logo-container {
+            display: inline-block;
+            padding: 25px 30px;
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo-container:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Logo */
+        .logo {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        /* Icon */
+        .icon-container {
+            position: relative;
+            width: 70px;
+            height: 70px;
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Main icon shape - cube with tools inside */
+        .icon {
+            position: relative;
+            width: 60px;
+            height: 60px;
+            transform-style: preserve-3d;
+            transform: rotateX(20deg) rotateY(-20deg);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .logo:hover .icon {
+            transform: rotateX(25deg) rotateY(-25deg) scale(1.05);
+        }
+        
+        /* Cube faces */
+        .cube-face {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #6d28d9 0%, #3b82f6 100%);
+            border-radius: 10px;
+            opacity: 0.9;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+        }
+        
+        .front {
+            transform: translateZ(30px);
+        }
+        
+        .back {
+            transform: translateZ(-30px) rotateY(180deg);
+            opacity: 0.7;
+        }
+        
+        .right {
+            transform: rotateY(90deg) translateZ(30px);
+            opacity: 0.8;
+        }
+        
+        .left {
+            transform: rotateY(-90deg) translateZ(30px);
+            opacity: 0.8;
+        }
+        
+        .top {
+            transform: rotateX(90deg) translateZ(30px);
+            opacity: 0.9;
+            background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+        }
+        
+        .bottom {
+            transform: rotateX(-90deg) translateZ(30px);
+            opacity: 0.7;
+        }
+        
+        /* Utility tools inside the cube */
+        .tools {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            z-index: 2;
+        }
+        
+        .wrench {
+            position: absolute;
+            width: 25px;
+            height: 8px;
+            background-color: #06d6a0;
+            border-radius: 4px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            box-shadow: 0 0 8px rgba(6, 214, 160, 0.4);
+        }
+        
+        .wrench::before {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #06d6a0;
+            top: -2px;
+            left: -6px;
+        }
+        
+        .wrench::after {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            border: 2px solid #06d6a0;
+            top: -4px;
+            right: -8px;
+        }
+        
+        .lightning {
+            position: absolute;
+            width: 6px;
+            height: 20px;
+            background-color: #fbbf24;
+            top: 10px;
+            left: 17px;
+            transform: rotate(25deg);
+            box-shadow: 0 0 8px rgba(251, 191, 36, 0.5);
+        }
+        
+        .lightning::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-bottom: 8px solid #fbbf24;
+            top: -8px;
+            left: -1px;
+        }
+        
+        .lightning::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 8px solid #fbbf24;
+            bottom: -8px;
+            left: -1px;
+        }
+        
+        /* Text */
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        .logo-text {
+            display: flex;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+        
+        .easy {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -0.5px;
+            text-shadow: 0 2px 4px rgba(139, 92, 246, 0.1);
+        }
+        
+        .util {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #06d6a0 0%, #0ea5e9 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -0.5px;
+            text-shadow: 0 2px 4px rgba(6, 214, 160, 0.1);
+        }
+        
+        .tagline {
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            color: #64748b;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        /* Demo header */
+        .demo-header {
+            width: 100%;
+            background: white;
+            border-radius: 12px;
+            padding: 15px 30px;
+            margin-top: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .demo-nav {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .demo-nav a {
+            text-decoration: none;
+            color: #475569;
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.2s;
+        }
+        
+        .demo-nav a:hover {
+            color: #3b82f6;
+        }
+        
+        .demo-btn {
+            background: linear-gradient(135deg, #6d28d9 0%, #3b82f6 100%);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .demo-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .logo {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .icon-container {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            
+            .text-container {
+                align-items: center;
+            }
+            
+            .easy, .util {
+                font-size: 36px;
+            }
+            
+            .demo-header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
+            }
+            
+            .demo-nav {
+                gap: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .easy, .util {
+                font-size: 30px;
+            }
+            
+            .icon-container {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .icon {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .cube-face {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .front {
+                transform: translateZ(25px);
+            }
+            
+            .back {
+                transform: translateZ(-25px) rotateY(180deg);
+            }
+            
+            .right {
+                transform: rotateY(90deg) translateZ(25px);
+            }
+            
+            .left {
+                transform: rotateY(-90deg) translateZ(25px);
+            }
+            
+            .top {
+                transform: rotateX(90deg) translateZ(25px);
+            }
+            
+            .bottom {
+                transform: rotateX(-90deg) translateZ(25px);
+            }
+            
+            .tools {
+                width: 35px;
+                height: 35px;
+            }
+        }
+        
+        /* Code display */
+        .code-container {
+            background: #1e293b;
+            border-radius: 12px;
+            padding: 25px;
+            margin-top: 40px;
+            text-align: left;
+            color: #e2e8f0;
+            font-family: monospace;
+            font-size: 14px;
+            overflow-x: auto;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .code-container h3 {
+            color: #f8fafc;
+            margin-bottom: 15px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .code-comment {
+            color: #94a3b8;
+        }
+        
+        .code-selector {
+            color: #7dd3fc;
+        }
+        
+        .code-property {
+            color: #f0abfc;
+        }
+        
+        .code-value {
+            color: #86efac;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>EasyUtil Tech Logo</h1>
+        <p class="subtitle">A modern, clean logo built with pure HTML & CSS. Features a 3D cube with utility tools inside, gradient text effects, and smooth hover animations.</p>
+        
+        <div class="logo-container">
+            <div class="logo">
+                <div class="icon-container">
+                    <div class="icon">
+                        <div class="cube-face front"></div>
+                        <div class="cube-face back"></div>
+                        <div class="cube-face right"></div>
+                        <div class="cube-face left"></div>
+                        <div class="cube-face top"></div>
+                        <div class="cube-face bottom"></div>
+                        <div class="tools">
+                            <div class="wrench"></div>
+                            <div class="lightning"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-container">
+                    <div class="logo-text">
+                        <div class="easy">Easy</div>
+                        <div class="util">Util</div>
+                    </div>
+                    <div class="tagline">Smart Web Tools</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="demo-header">
+            <div class="logo">
+                <div class="icon-container">
+                    <div class="icon">
+                        <div class="cube-face front"></div>
+                        <div class="cube-face back"></div>
+                        <div class="cube-face right"></div>
+                        <div class="cube-face left"></div>
+                        <div class="cube-face top"></div>
+                        <div class="cube-face bottom"></div>
+                        <div class="tools">
+                            <div class="wrench"></div>
+                            <div class="lightning"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-container">
+                    <div class="logo-text">
+                        <div class="easy">Easy</div>
+                        <div class="util">Util</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="demo-nav">
+                <a href="#">Tools</a>
+                <a href="#">Features</a>
+                <a href="#">Pricing</a>
+                <a href="#">Docs</a>
+            </div>
+            
+            <button class="demo-btn">Get Started</button>
+        </div>
+        
+        <div class="code-container">
+            <h3>Implementation Details:</h3>
+            <pre><code><span class="code-comment">/* Logo Structure */</span>
+<span class="code-selector">.logo</span> {
+  <span class="code-property">display</span>: <span class="code-value">flex</span>;
+  <span class="code-property">align-items</span>: <span class="code-value">center</span>;
+}
+
+<span class="code-comment">/* 3D Cube Icon */</span>
+<span class="code-selector">.icon</span> {
+  <span class="code-property">position</span>: <span class="code-value">relative</span>;
+  <span class="code-property">width</span>: <span class="code-value">60px</span>;
+  <span class="code-property">height</span>: <span class="code-value">60px</span>;
+  <span class="code-property">transform-style</span>: <span class="code-value">preserve-3d</span>;
+  <span class="code-property">transform</span>: <span class="code-value">rotateX(20deg) rotateY(-20deg)</span>;
+  <span class="code-property">transition</span>: <span class="code-value">all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)</span>;
+}
+
+<span class="code-comment">/* Gradient Text Effects */</span>
+<span class="code-selector">.easy</span> {
+  <span class="code-property">background</span>: <span class="code-value">linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%)</span>;
+  <span class="code-property">-webkit-background-clip</span>: <span class="code-value">text</span>;
+  <span class="code-property">background-clip</span>: <span class="code-value">text</span>;
+  <span class="code-property">color</span>: <span class="code-value">transparent</span>;
+}
+
+<span class="code-selector">.util</span> {
+  <span class="code-property">background</span>: <span class="code-value">linear-gradient(135deg, #06d6a0 0%, #0ea5e9 100%)</span>;
+  <span class="code-property">-webkit-background-clip</span>: <span class="code-value">text</span>;
+  <span class="code-property">background-clip</span>: <span class="code-value">text</span>;
+  <span class="code-property">color</span>: <span class="code-value">transparent</span>;
+}</code></pre>
+        </div>
+    </div>
+
+    <script>
+        // Add interactive hover effect on logo
+        document.querySelector('.logo').addEventListener('mouseenter', function() {
+            const icon = document.querySelector('.icon');
+            icon.style.transform = 'rotateX(25deg) rotateY(-25deg) scale(1.05)';
+        });
+        
+        document.querySelector('.logo').addEventListener('mouseleave', function() {
+            const icon = document.querySelector('.icon');
+            icon.style.transform = 'rotateX(20deg) rotateY(-20deg) scale(1)';
+        });
+    </script>
+</body>
+</html>
